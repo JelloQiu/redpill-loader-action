@@ -28,8 +28,11 @@ cd ..
 # build redpill-load
 cd redpill-load
 cp -f ${root}/user_config.DS3615xs.json ./user_config.json
-./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
-./ext-manager.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mlx4_core/rpext-index.json
+./ext-manager.sh add "https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json"
+./ext-manager.sh add "https://raw.githubusercontent.com/pocopico/rp-ext/master/mlx4_core/rpext-index.json"
+./ext-manager.sh add "https://raw.githubusercontent.com/pocopico/rp-ext/master/igbvf/rpext-index.json"
+./ext-manager.sh add "https://raw.githubusercontent.com/pocopico/rp-ext/master/e1000/rpext-index.json"
+
 sudo ./build-loader.sh 'DS3615xs' '7.0.1-42218'
 mv images/redpill-DS3615xs_7.0.1-4221*.img ${root}/output/
 cd ${root}
